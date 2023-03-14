@@ -663,6 +663,170 @@
 //   return str.filter(e=>e.length === 4);
 // }
 
-//CORRECT 
+//CORRECT
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// In a small town the population is p0 = 1000 at the beginning of a year. The population regularly increases by 2 percent per year and moreover 50 new inhabitants per year come to live in the town. How many years does the town need to see its population greater or equal to p = 1200 inhabitants?
+
+// At the end of the first year there will be:
+// 1000 + 1000 * 0.02 + 50 => 1070 inhabitants
+
+// At the end of the 2nd year there will be:
+// 1070 + 1070 * 0.02 + 50 => 1141 inhabitants (** number of inhabitants is an integer **)
+
+// At the end of the 3rd year there will be:
+// 1141 + 1141 * 0.02 + 50 => 1213
+
+// It will need 3 entire years.
+// More generally given parameters:
+
+// p0, percent, aug (inhabitants coming or leaving each year), p (population to equal or surpass)
+
+// the function nb_year should return n number of entire years needed to get a population greater or equal to p.
+
+// aug is an integer, percent a positive or null floating number, p0 and p are positive integers (> 0)
+
+// Examples:
+// nb_year(1500, 5, 100, 5000) -> 15
+// nb_year(1500000, 2.5, 10000, 2000000) -> 10
+// Note:
+// Don't forget to convert the percent parameter as a percentage in the body of your function: if the parameter percent is 2 you have to convert it to 0.02.
+
+//p0 = 1000  begining
+//+= 2% + 50/year
+//
+
+// function nbYear(p0, percent, aug, p) {
+//   for (var years = 0; p0 < p; years++) {
+//   p0 = Math.floor(p0 + p0 * percent/100 + aug)
+//   }
+//   return years
+// }
+
+// console.log(nbYear(1500,5,100,5000));
+
+//INCORRECTO
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case.
+
+// (In this case, all triangles must have surface greater than 0 to be accepted).
+
+// MATHEMATICSFUNDAMENTALS
+
+// function isTriangle(a, b, c) {
+//   return a + b > c && a + c > b && b + c > a;
+// }
+
+//CORRECT BUT WITH THE HELP OF CHAT GPT, THIS ITS NOT VALID
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+// Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+
+// Examples:
+
+// Testing: [0, 0, 0, 1] ==> 1
+// Testing: [0, 0, 1, 0] ==> 2
+// Testing: [0, 1, 0, 1] ==> 5
+// Testing: [1, 0, 0, 1] ==> 9
+// Testing: [0, 0, 1, 0] ==> 2
+// Testing: [0, 1, 1, 0] ==> 6
+// Testing: [1, 1, 1, 1] ==> 15
+// Testing: [1, 0, 1, 1] ==> 11
+// However, the arrays can have varying lengths, not just limited to 4.
+// let bi = [1, 1, 1, 1];
+
+// const binaryArrayToNumber = (num) => {
+//   let sum = 0;
+
+//     for (let i = 0; i < num.length; i++) {
+//        sum += +num[i] * 2 ** (num.length - 1 - i);
+//     }
+//     return sum;
+// };
+
+// console.log(binaryArrayToNumber(bi.join('')));
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// You need to write a function that reverses the words in a given string. A word can also fit an empty string. If this is not clear enough, here are some examples:
+
+// As the input may have trailing spaces, you will also need to ignore unneccesary whitespace.
+
+// Example (Input --> Output)
+
+// "Hello World" --> "World Hello"
+// "Hi There." --> "There. Hi"
+// Happy coding!
+
+// function reverse(string){
+//   return string.split(' ').reverse().join(' ')
+// }
+// console.log(reverse('Hello World.'));
+
+//CORRECTO
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let s = 'aaaa aaa aa aaaaa'
+// function findShort(s) {
+//   let arr = s.split(' ');
+//   let shortest = 1000;
+//   for (let i = 0; i < arr.length; i++) {
+//         if(arr[i].length < shortest) shortest = arr[i].length
+//   }
+//   return arr.filter(e => e.length == shortest)
+// }
+
+// console.log(findShort());
+
+//CORRECTO
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// This kata is from check py.checkio.org
+
+// You are given an array with positive numbers and a non-negative number N. You should find the N-th power of the element in the array with the index N. If N is outside of the array, then return -1. Don't forget that the first element has the index 0.
+
+// Let's look at a few examples:
+
+// array = [1, 2, 3, 4] and N = 2, then the result is 3^2 == 9;
+// array = [1, 2, 3] and N = 3, but N is outside of the array, so the result is -1.
+// let arr = [1, 2, 3, 4]
+// function index(array, n) {
+//   return array[n] ? Math.pow(array[n] ,n) : -1
+// }
+
+// console.log(index(arr, 2));
+
+//CORRECTO
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Define a function that takes an integer argument and returns a logical value true or false depending on if the integer is a prime.
+
+// Per Wikipedia, a prime number ( or a prime ) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+
+// Requirements
+// You can assume you will be given an integer input.
+// You can not assume that the integer will be only positive. You may be given negative numbers as well ( or 0 ).
+// NOTE on performance: There are no fancy optimizations required, but still the most trivial solutions might time out. Numbers go up to 2^31 ( or similar, depending on language ). Looping all the way up to n, or n/2, will be too slow.
+// Example
+// is-prime 1 -> False
+// is-prime 2 -> True
+// Encodings
+// purity: LetRec
+// numEncoding: BinaryScott ( so, no negative numbers )
+// export deconstructor if for your Boolean encoding
+
+
+function isPrime(num) {
+  
+}
