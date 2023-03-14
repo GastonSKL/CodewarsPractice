@@ -450,6 +450,164 @@
 // 20, 2 --> 0
 // *Use Comparison and Logical Operators.
 
-function finalGrade (exam, projects) {
+// function finalGrade(exam, projects) {
+//   if (exam > 90 && projects > 10) return 100;
+//   else if (exam > 75 && projects >= 5) return 90;
+//   else if (exam > 50 && projects >= 2) return 75;
+//   else return 0;
+// }
+
+// INCORRECTO, EL PROBLEMA CLARAMENTE PIDO UN OR EN EL PRIMER IF
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// An anagram is the result of rearranging the letters of a word to produce a new word (see wikipedia).
+
+// Note: anagrams are case insensitive
+
+// Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
+
+// Examples
+// "foefet" is an anagram of "toffee"
+
+// "Buckethead" is an anagram of "DeathCubeK"
+
+// var isAnagram = function (test, original) {
+//   return test.toLowerCase().split('').sort().join('') === original.toLowerCase().split('').sort().join('')
+// };
+
+//CORRECTO
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+
+// Examples:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+// let string1 = 'xyaabbbccccdefww'
+// let string2 = 'xxxxyyyyabklmopq'
+// function longest() {
+//     debugger
+//     return [...new Set(string1 + string2)].sort().join('')    //El objeto set que instancio aca me deja crear un array de valores unicos sn la necesitadad de aplicar ningun filtro,
+// }                                                             //esto sirve no solo para valores tipo string o char si no que hasta para otros objetos.
+
+//CORRECTO
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// As a part of this Kata, you need to create a function that when provided with a triplet, returns the index of the numerical element that lies between the other two elements.
+
+// The input to the function will be an array of three distinct numbers (Haskell: a tuple).
+
+// For example:
+
+// gimme([2, 3, 1]) => 0
+// 2 is the number that fits between 1 and 3 and the index of 2 in the input array is 0.
+
+// Another example (just to make sure it is clear):
+
+// gimme([5, 10, 14]) => 1
+// 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
+
+// function gimme() {
+//   debugger
+//   const arr = [5,16,14]
+//   return arr.indexOf(arr.concat().sort(function(a, b) { return a - b })[1])
+// }
+// console.log(gimme());
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// The museum of incredible dull things
+// The museum of incredible dull things wants to get rid of some exhibitions. Miriam, the interior architect, comes up with a plan to remove the most boring exhibitions. She gives them a rating, and then removes the one with the lowest rating.
+
+// However, just as she finished rating all exhibitions, she's off to an important fair, so she asks you to write a program that tells her the ratings of the items after one removed the lowest one. Fair enough.
+
+// Task
+// Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
+
+// Don't change the order of the elements that are left.
+
+// Examples
+// * Input: [1,2,3,4,5], output = [2,3,4,5]
+// * Input: [5,3,2,1,4], output = [5,3,2,4]
+// * Input: [2,2,1,2,1], output = [2,2,2,1]
+// let arr = [1,2,3,5,4];
+
+// function removeSmallest() {
+//      arr = arr.slice(0);
+//     let min = Math.min(...arr);
+//     arr=  arr.splice(arr.indexOf(min),1)
+//     return arr;
+// }
+
+// console.log(removeSmallest());
+
+//RESEARCH
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// After a hard quarter in the office you decide to get some rest on a vacation. So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
+
+// You will need a rental car in order for you to get around in your vacation. The manager of the car rental makes you some good offers.
+
+// Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+
+// Write a code that gives out the total amount for different days(d).
+
+// let rentDay = 40;
+// function rentalCarCost(d) {
+
+//   return d >= 3 ? ((40*d)-20) : d >= 7 ? ((40*d)-50) : 40*d;
+
+// }
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+
+// For example: (Input --> Output)
+
+// 10 --> 1
+// 99 --> 18
+// -32 --> 5
+// Let's assume that all numbers in the input will be integer values.
+
+// let num = -23;
+// function sumDigits(number) {
+//   let arr = String(Math.abs(num)).split("");
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += Number(arr[i]);
+//   }
+//   return sum;
+// }
+
+// console.log(sumDigits());
+
+//CORRECT BUT UGLY AF COULD BE BETTER I GUESS
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+
+// The binary number returned should be a string.
+
+// Examples:(Input1, Input2 --> Output (explanation)))
+
+// 1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
+// 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
+
+function addBinary(a,b) {
   
 }
