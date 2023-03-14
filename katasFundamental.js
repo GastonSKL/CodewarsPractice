@@ -608,6 +608,61 @@
 // 1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
 // 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
 
-function addBinary(a,b) {
-  
-}
+// function addBinary(a,b) {
+//   return (a+b).toString(2);
+// }
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+
+// Examples
+// "hello"     -->  "hll"
+// "codewars"  -->  "cdwrs"
+// "goodbye"   -->  "gdby"
+// "HELLO"     -->  "HELLO"
+// don't worry about uppercase vowels
+// y is not considered a vowel for this kata
+
+// let string = 'codewars';
+// function shortcut() {
+//   return string.replace(/[aeiou]/gi, '')
+// }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Write a function that returns a string in which firstname is swapped with last name.
+
+// Example(Input --> Output)
+
+// "john McClane" --> "McClane john"
+
+// let string = "john McClane";
+// function nameShuffler() {
+//   return string.split(' ').reverse().join(' ');
+// }
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+// i.e.
+
+// friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
+// Note: keep the original order of the names in the output.
+
+// function friend(str) {
+//   return str.filter(e=>e.length === 4);
+// }
+
+//CORRECT 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
