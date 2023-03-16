@@ -810,3 +810,239 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// We need a simple function that determines if a plural is needed or not. It should take a number, and return true if a plural should be used with that number or false if not. This would be useful when printing out a string such as 5 minutes, 14 apples, or 1 sun.
+
+// You only need to worry about english grammar rules for this kata, where anything that isn't singular (one of something), it is plural (not one of something).
+
+// All values will be positive integers or floats, or zero.
+
+// function plural(n) {
+//     return n != 1;
+// }
+
+//COORECTO
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Task:
+// Your task is to write a function which returns the sum of following series upto nth term(parameter).
+
+// Series: 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 +...
+// Rules:
+// You need to round the answer to 2 decimal places and return it as String.
+
+// If the given value is 0 then it should return 0.00
+
+// You will only be given Natural Numbers as arguments.
+
+// Examples:(Input --> Output)
+// 1 --> 1 --> "1.00"
+// 2 --> 1 + 1/4 --> "1.25"
+// 5 --> 1 + 1/4 + 1/7 + 1/10 + 1/13 --> "1.57"
+
+// function SeriesSum(n) {
+//     debugger
+//     if (n==0) return (Math.round(n * 100) / 100).toFixed(2);;
+
+//     let divisor = 1;
+//     let result = 1;
+//     for (let i = 1; i < n; i++) {
+//         divisor += 3
+//         result += 1/divisor
+//     }
+//     return (Math.round(result * 100) / 100).toFixed(2);
+// }
+
+//COORECTO COULD BE BETTER
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Kids drink toddy.
+// Teens drink coke.
+// Young adults drink beer.
+// Adults drink whisky.
+// Make a function that receive age, and return what they drink.
+
+// Rules:
+
+// Children under 14 old.
+// Teens under 18 old.
+// Young under 21 old.
+// Adults have 21 or more.
+// Examples: (Input --> Output)
+
+// 13 --> "drink toddy"
+// 17 --> "drink coke"
+// 18 --> "drink beer"
+// 20 --> "drink beer"
+// 30 --> "drink whisky"
+
+// function peopleWithAgeDrink(old) {
+//     return old <= 14 ? "drink toddy" : old < 18 ? "drink coke" : old < 21 ? "drink beer" : "drink whisky";  
+// }
+// console.log(peopleWithAgeDrink(13));
+// console.log(peopleWithAgeDrink(17));
+// console.log(peopleWithAgeDrink(18));
+// console.log(peopleWithAgeDrink(20));
+// console.log(peopleWithAgeDrink(30));
+
+//CORRECT 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Task
+// Given a list of digits, return the smallest number that could be formed from these digits, using the digits only once (ignore duplicates).
+
+// Notes:
+// Only positive integers will be passed to the function (> 0 ), no negatives or zeros.
+// Input >> Output Examples
+// minValue ({1, 3, 1})  ==> return (13)
+// Explanation:
+// (13) is the minimum number could be formed from {1, 3, 1} , Without duplications
+
+// minValue({5, 7, 5, 9, 7})  ==> return (579)
+// Explanation:
+// (579) is the minimum number could be formed from {5, 7, 5, 9, 7} , Without duplications
+
+// minValue({1, 9, 3, 1, 7, 4, 6, 6, 7}) return  ==> (134679)
+// Explanation:
+// (134679) is the minimum number could be formed from {1, 9, 3, 1, 7, 4, 6, 6, 7} , Without duplications
+// const numbers = [1, 9, 3, 1, 7, 4, 6, 6, 7]
+// let arr;
+
+// function minValue(values){
+//     return Number([...new Set(values)].sort(function(a, b) {return a - b;}).join(''));
+// }
+
+// console.log(minValue(numbers));
+
+//CORRECT CLEVER!
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Jamie is a programmer, and James' girlfriend. She likes diamonds, and wants a diamond string from James. Since James doesn't know how to make this happen, he needs your help.
+
+// Task
+// You need to return a string that looks like a diamond shape when printed on the screen, using asterisk (*) characters. Trailing spaces should be removed, and every line must be terminated with a newline character (\n).
+
+// Return null/nil/None/... if the input is an even number or negative, as it is not possible to print a diamond of even or negative size.
+
+// Examples
+// A size 3 diamond:
+
+//  *
+// ***
+//  *
+// ...which would appear as a string of " *\n***\n *\n"
+
+// A size 5 diamond:
+
+//   *
+//  ***
+// *****
+//  ***
+//   *
+// ...that is:
+
+// "  *\n ***\n*****\n ***\n  *\n"
+
+// function diamond(n){
+//     if (n<=0 || n % 2 ==0) return null;
+
+//     for (let i = 0; i < n; i++) {
+        
+//     }
+// }
+// let arr = [n,n,n];
+// console.log();
+
+//COULDNT DO IT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
+
+// If you want to know more: http://en.wikipedia.org/wiki/DNA
+
+// In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+
+// More similar exercise are found here: http://rosalind.info/problems/list-view/ (source)
+
+// Example: (input --> output)
+
+// "ATTGC" --> "TAACG"
+// "GTAT" --> "CATA"
+
+// const dna = "ATTAC"
+// const dna2 = "GTAT"
+
+// function DNAStrand(){
+//     let arr = dna.split('');
+//         debugger
+//         if(arr[i]=="A") arr[i] = "T";
+//         if(arr[i]=="T") arr[i] = "A";
+//         if(arr[i]=="C") arr[i] = "G";
+//         if(arr[i]=="G") arr[i] = "C";
+        
+//     return arr;
+// }
+
+//COULDNT DO IT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Your task is to make function, which returns the sum of a sequence of integers.
+
+// The sequence is defined by 3 non-negative values: begin, end, step (inclusive).
+
+// If begin value is greater than the end, function should returns 0
+
+// Examples
+
+// 2,2,2 --> 2
+// 2,6,2 --> 12 (2 + 4 + 6)
+// 1,5,1 --> 15 (1 + 2 + 3 + 4 + 5)
+// 1,5,3  --> 5 (1 + 4)
+
+// const sequenceSum = (begin, end, step) => {
+//     if (begin > end) {
+//         return 0;
+//       }
+//       return begin + sequenceSum(begin + step, end, step);
+// };
+
+// console.log(sequenceSum(2,6,2));
+
+//CORRECTO
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// The first input array is the key to the correct answers to an exam, like ["a", "a", "b", "d"]. The second one contains a student's submitted answers.
+
+// The two arrays are not empty and are the same length. Return the score for this array of answers, giving +4 for each correct answer, -1 for each incorrect answer, and +0 for each blank answer, represented as an empty string (in C the space character is used).
+
+// If the score < 0, return 0.
+
+// For example:
+
+// checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]) → 6
+// checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]) → 7
+// checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]) → 16
+// checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]) → 0
+
+// function checkExam(array1, array2) {
+//     debugger
+//     let sum = 0;
+//     for (let i = 0; i < array1.length; i++) {
+//         if(array1[i] == array2[i]) sum += 4;
+//         if((array1[i] != array2[i]) && (array2[i] != '')) sum -= 1;
+//         if(array2[i] == '') sum += 0;
+//     }
+//     return sum < 0 ? 0 : sum
+// }
+
+// console.log(checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]));
+
+//CORRECTO
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
