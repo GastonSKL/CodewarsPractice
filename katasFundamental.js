@@ -878,7 +878,7 @@
 // 30 --> "drink whisky"
 
 // function peopleWithAgeDrink(old) {
-//     return old <= 14 ? "drink toddy" : old < 18 ? "drink coke" : old < 21 ? "drink beer" : "drink whisky";  
+//     return old <= 14 ? "drink toddy" : old < 18 ? "drink coke" : old < 21 ? "drink beer" : "drink whisky";
 // }
 // console.log(peopleWithAgeDrink(13));
 // console.log(peopleWithAgeDrink(17));
@@ -886,7 +886,7 @@
 // console.log(peopleWithAgeDrink(20));
 // console.log(peopleWithAgeDrink(30));
 
-//CORRECT 
+//CORRECT
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -950,7 +950,7 @@
 //     if (n<=0 || n % 2 ==0) return null;
 
 //     for (let i = 0; i < n; i++) {
-        
+
 //     }
 // }
 // let arr = [n,n,n];
@@ -983,7 +983,7 @@
 //         if(arr[i]=="T") arr[i] = "A";
 //         if(arr[i]=="C") arr[i] = "G";
 //         if(arr[i]=="G") arr[i] = "C";
-        
+
 //     return arr;
 // }
 
@@ -1046,3 +1046,277 @@
 //CORRECTO
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Count the number of divisors of a positive integer n.
+
+// Random tests go up to n = 500000.
+
+// Examples (input --> output)
+// 4 --> 3 (1, 2, 4)
+// 5 --> 2 (1, 5)
+// 12 --> 6 (1, 2, 3, 4, 6, 12)
+// 30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30)
+// Note you should only return a number, the count of divisors. The numbers between parentheses are shown only for you to see which numbers are counted in each case.
+
+// function getDivisorsCnt(n){
+//     let arr = [];
+//     for (let i = 1; i <= n; i++) {
+//         n%i==0 ? arr.push(i) : ""
+//     }
+//     return arr.length;
+// }
+
+// console.log(getDivisorsCnt(30));
+
+//CORRECTO
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Fix the function
+// I created this function to add five to any number that was passed in to it and return the new value. It doesn't throw any errors but it returns the wrong number.
+
+// Can you help me fix the function?
+
+// function addFive(num) {
+//     return num + 5
+//   }
+
+//CORRECTO
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
+
+// For example, if this array were passed as an argument:
+
+// ["Telescopes", "Glasses", "Eyes", "Monocles"]
+
+// Your function would return the following array:
+
+// ["Eyes", "Glasses", "Monocles", "Telescopes"]
+
+// All of the strings in the array passed to your function will be different lengths, so you will not have to decide how to order multiple strings of the same length.
+
+// function sortByLength (array) {
+//     return array.sort(function(a, b){return a.length - b.length})
+// };
+
+// console.log(string.sort());
+
+//CORRECTO
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+
+// For example:
+
+// uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+// uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+// uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+
+// const uniqueInOrder= iterable =>{
+//     return [...iterable].filter((element, index)=> element != iterable[index + 1])
+// }
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// You are given two sorted arrays that both only contain integers. Your task is to find a way to merge them into a single one, sorted in asc order. Complete the function mergeArrays(arr1, arr2), where arr1 and arr2 are the original sorted arrays.
+
+// You don't need to worry about validation, since arr1 and arr2 must be arrays with 0 or more Integers. If both arr1 and arr2 are empty, then just return an empty array.
+
+// Note: arr1 and arr2 may be sorted in different orders. Also arr1 and arr2 may have same integers. Remove duplicated in the returned result.
+
+// Examples (input -> output)
+// * [1, 2, 3, 4, 5], [6, 7, 8, 9, 10] -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// * [1, 3, 5, 7, 9], [10, 8, 6, 4, 2] -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// * [1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12] -> [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]
+// Happy coding!
+
+// let str_1 = [1,3,5,7,9,11,12];
+// let str_2 = [1,2,3,4,5,10,12];
+
+// function mergeArrays(arr1, arr2) {
+//     let newArr = [...arr1, ...arr2];
+//     return newArr.sort(function(a, b){return a-b}).filter((element, index) => element != newArr[index+1]);
+// }
+
+// console.log(mergeArrays(str_1, str_2));
+
+//CORRECT AND VERY CLEVER :D
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Story
+// Your online store likes to give out coupons for special occasions. Some customers try to cheat the system by entering invalid codes or using expired coupons.
+
+// Task
+// Your mission:
+// Write a function called checkCoupon which verifies that a coupon code is valid and not expired.
+
+// A coupon is no more valid on the day AFTER the expiration date. All dates will be passed as strings in this format: "MONTH DATE, YEAR".
+
+// Examples:
+// checkCoupon("123", "123", "July 9, 2015", "July 9, 2015")  ===  true
+// checkCoupon("123", "123", "July 9, 2015", "July 2, 2015")  ===  false
+
+// function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+//     return enteredCode === correctCode && Date.parse(expirationDate) >= Date.parse(currentDate)
+// }
+
+// console.log(new Date(Date.parse("July 9, 2015")));
+
+//CORRECT BUT NOT BY MY SELF :D
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Define a function that removes duplicates from an array of numbers and returns it as a result.
+
+// The order of the sequence has to stay the same.
+
+// function distinct(a) {
+//     return [...new Set(a)];
+//   }
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+
+// Examples
+// "www.codewars.com#about" --> "www.codewars.com"
+// "www.codewars.com?page=1" -->"www.codewars.com?page=1"
+
+// function removeUrlAnchor(url) {
+//   const regex = /#.*/;
+//   return url.replace(regex, "");
+// }
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Given an integer as input, can you round it to the next (meaning, "greater than or equal") multiple of 5?
+
+// Examples:
+
+// input:    output:
+// 0    ->   0
+// 2    ->   5
+// 3    ->   5
+// 12   ->   15
+// 21   ->   25
+// 30   ->   30
+// -2   ->   0
+// -5   ->   -5
+// etc.
+// Input may be any positive or negative integer (including 0).
+
+// You can assume that all inputs are valid integers.
+
+// function roundToNext5(n){
+//     return Math.ceil(n/5)*5;
+// }
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. If they are, return true. Else, return false.
+
+// You can assume all values in the array are numbers.
+
+// let arr_1 = [101, 45, 75, 105, 99, 107];
+
+// function smallEnough(){
+//     for (let i = 0; i < arr_1.length; i++) {
+//         if(arr_1[i] > 107){
+//             return false;
+//             break
+//         }
+//     }
+//     return true
+// }
+
+// console.log(smallEnough());
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// There is a bus moving in the city which takes and drops some people at each bus stop.
+
+// You are provided with a list (or array) of integer pairs. Elements of each pair represent the number of people that get on the bus (the first item) and the number of people that get off the bus (the second item) at a bus stop.
+
+// Your task is to return the number of people who are still on the bus after the last bus stop (after the last array). Even though it is the last bus stop, the bus might not be empty and some people might still be inside the bus, they are probably sleeping there :D
+
+// Take a look on the test cases.
+
+// Please keep in mind that the test cases ensure that the number of people in the bus is always >= 0. So the returned integer can't be negative.
+
+// The second value in the first pair in the array is 0, since the bus is empty in the first bus stop.
+
+
+// var number = function(busStops){
+//     debugger
+//     let sum= 0;
+//     for (let i = 0; i < busStops.length; i++) {
+//             sum += busStops[i][0]
+//             sum -= busStops[i][1]            
+//     }
+//     return sum;
+// }
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Find the total sum of internal angles (in degrees) in an n-sided simple polygon. N will be greater than 2.
+
+// // function angle(n) {
+// //     return 180 * (n-2)
+// }
+
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Debugging sayHello function
+// The starship Enterprise has run into some problem when creating a program to greet everyone as they come aboard. It is your job to fix the code and get the program working again!
+
+// Example output:
+
+// Hello, Mr. Spock
+
+// function sayHello(name) {
+//     return "Hello, "+name
+// }
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+// Example:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+// None of the arrays will be empty, so you don't have to worry about that!
+// let arr = ["Keep", "Remove", "Keep", "Remove", "Keep"]
+
+// function removeEveryOther(){
+//     return arr.filter((element, index) => index % 2 ==0)
+// }
+
+// console.log(removeEveryOther());
+
+//CORRECT
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
